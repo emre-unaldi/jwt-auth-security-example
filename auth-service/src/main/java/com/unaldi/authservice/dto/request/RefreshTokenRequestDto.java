@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Schema(description = "Request to refresh access token using refresh token")
-class RefreshTokenRequestDto {
+public class RefreshTokenRequestDto {
 
     @NotBlank(message = "Refresh token is required")
     @Schema(description = "Valid refresh token")

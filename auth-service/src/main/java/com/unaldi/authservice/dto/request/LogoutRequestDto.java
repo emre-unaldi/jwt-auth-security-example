@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Schema(description = "Logout request")
-class LogoutRequestDto {
+public class LogoutRequestDto {
 
     @Schema(description = "Refresh token to revoke")
     private String refreshToken;

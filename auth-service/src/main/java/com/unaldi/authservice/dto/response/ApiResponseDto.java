@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Schema(description = "Generic API response wrapper")
-public class ApiResponse<T> {
+public class ApiResponseDto<T> {
 
     @Schema(description = "Response success status", example = "true")
     private boolean success;
@@ -45,8 +45,8 @@ public class ApiResponse<T> {
      * @param <T> The type of data
      * @return ApiResponse instance
      */
-    public static <T> ApiResponse<T> success(T data, String message) {
-        return ApiResponse.<T>builder()
+    public static <T> ApiResponseDto<T> success(T data, String message) {
+        return ApiResponseDto.<T>builder()
                 .success(true)
                 .message(message)
                 .data(data)
@@ -61,7 +61,7 @@ public class ApiResponse<T> {
      * @param <T> The type of data
      * @return ApiResponse instance
      */
-    public static <T> ApiResponse<T> success(T data) {
+    public static <T> ApiResponseDto<T> success(T data) {
         return success(data, "Operation completed successfully");
     }
 
@@ -72,8 +72,8 @@ public class ApiResponse<T> {
      * @param <T> The type of data
      * @return ApiResponse instance
      */
-    public static <T> ApiResponse<T> error(String message) {
-        return ApiResponse.<T>builder()
+    public static <T> ApiResponseDto<T> error(String message) {
+        return ApiResponseDto.<T>builder()
                 .success(false)
                 .message(message)
                 .timestamp(LocalDateTime.now())

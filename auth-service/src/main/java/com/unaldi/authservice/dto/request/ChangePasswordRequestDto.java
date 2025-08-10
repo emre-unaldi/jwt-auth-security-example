@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Schema(description = "Request to change password using current password")
-class ChangePasswordRequestDto {
+public class ChangePasswordRequestDto {
 
     @NotBlank(message = "Current password is required")
     @Schema(description = "Current password")

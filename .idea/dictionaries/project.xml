@@ -2,7 +2,11 @@
   <dictionary name="project">
     <words>
       <w>authservice</w>
+      <w>dpage</w>
+      <w>isready</w>
       <w>postgre</w>
+      <w>redisinsight</w>
+      <w>redislabs</w>
       <w>unaldi</w>
       <w>ünaldı</w>
     </words>

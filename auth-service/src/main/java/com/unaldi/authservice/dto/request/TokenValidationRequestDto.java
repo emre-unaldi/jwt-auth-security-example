@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Schema(description = "Request to validate a token")
-class TokenValidationRequestDto {
+public class TokenValidationRequestDto {
 
     @NotBlank(message = "Token is required")
     @Schema(description = "Token to validate")
